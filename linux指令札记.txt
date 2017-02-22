@@ -1,0 +1,35 @@
+mv dirE/ese566A_Tutorial.txt .    //将dirE里面的ese566A文件移动到dirE所在的文件夹
+mv dirE/ese566A_Tutorial.txt ../   //将dirE里面的ese566A文件移动到dirE所在的上级文件夹
+cp -r dirB LinuxTutorial/    //将dirB里面的所有文件copy到LinuxTutorial文件中         
+
+
+../ 上级目录
+.   当前目录
+cd -(指返回历史上一个历史目录）
+
+Linux中很多压缩程序只能针对一个文件进行压缩，这样当你想要压缩一大堆文件时，你得先将这一大堆文件先打成一个包（tar命令），然后再用压缩程序进行压缩（gzip bzip2命令）。
+tar -cvf log.tar log2012.log 仅打包，不压缩！ 
+tar -zcvf log.tar.gz log2012.log 打包后，以 gzip 压缩 
+tar -jcvf log.tar.bz2 log2012.log 打包后，以 bzip2 压缩 
+
+常见的环境变量 
+PATH　　　　决定了shell将到哪些目录中寻找命令或程序
+HOME　　　　当前用户主目录
+
+TERM　　　　终端的类型。
+
+UID　　　　当前用户的识别字，取值是由数位构成的字串。
+
+PWD　　　　当前工作目录的绝对路径名，该变量的取值随cd命令的使用而变化。
+HISTSIZE　　历史记录数
+LOGNAME　　当前用户的登录名 
+HOSTNAME　　指主机的名称
+SHELL　　　　前用户Shell类型 
+LANGUGE　　语言相关的环境变量，多语言可以修改此环境变量
+MAIL　　　　当前用户的邮件存放目录 
+PS1　　　　shell命令行基本提示符，对于root用户是#，对于普通用户是$
+PS2　　　　附属提示符，默认是“>”
+
+
+LinuxTutorial = ${PWD} //将当前的路径赋值给LinuxTutorial
+cd ${LinuxTutorial}    //进入此路径
